@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { useTranslation } from "react-i18next";
-import { X } from "lucide-react";
-import type { RootState } from "../../store";
-import { closeSidebar } from "../../store/modalSlice";
-import { getDefaultNavItems } from "../../utils";
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { X } from 'lucide-react';
+import type { RootState } from '../../store';
+import { closeSidebar } from '../../store/modalSlice';
+import { getDefaultNavItems } from '../../utils';
 
 export interface NavItem {
   id: string;
@@ -29,7 +29,7 @@ const Sidebar = () => {
       className={`
       fixed lg:static top-0 left-0 min-h-screen w-64 bg-white shadow-lg border-r border-gray-200 z-50
       transform transition-transform duration-300 ease-in-out
-      ${isOpen ? "translate-x-0" : "-translate-x-full"}
+      ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       lg:translate-x-0 lg:shadow-sm
     `}
     >
@@ -38,13 +38,13 @@ const Sidebar = () => {
           <button
             onClick={() => dispatch(closeSidebar())}
             className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            aria-label={t("common.close")}
+            aria-label={t('common.close')}
           >
             <X className="h-6 w-6" />
           </button>
         </div>
         <nav className="space-y-2">
-          {currentNavItems.map((item) => {
+          {currentNavItems.map(item => {
             const Icon = item.icon;
             return (
               <Link

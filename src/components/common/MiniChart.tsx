@@ -1,20 +1,20 @@
 interface MiniChartProps {
   data?: number[];
-  trend?: "up" | "down";
-  size?: "sm" | "md" | "lg";
+  trend?: 'up' | 'down';
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
 const MiniChart = ({
   data = [30, 25, 20, 17, 15, 10],
-  trend = "up",
-  size = "md",
-  className = "",
+  trend = 'up',
+  size = 'md',
+  className = '',
 }: MiniChartProps) => {
   const sizeClasses = {
-    sm: "w-16 h-8",
-    md: "w-24 h-12",
-    lg: "w-32 h-16",
+    sm: 'w-16 h-8',
+    md: 'w-24 h-12',
+    lg: 'w-32 h-16',
   };
 
   const maxValue = Math.max(...data);
@@ -22,22 +22,22 @@ const MiniChart = ({
   const range = maxValue - minValue || 1;
 
   const normalizedData = data.map(
-    (value) => ((value - minValue) / range) * 30 + 5 
+    value => ((value - minValue) / range) * 30 + 5
   );
 
   const pathData = normalizedData
     .map((value, index) => {
-      const x = (index / (data.length - 1)) * 70 + 5; 
-      return `${index === 0 ? "M" : "L"} ${x} ${value}`;
+      const x = (index / (data.length - 1)) * 70 + 5;
+      return `${index === 0 ? 'M' : 'L'} ${x} ${value}`;
     })
-    .join(" ");
+    .join(' ');
 
-  const isUpwardTrend = trend === "up";
+  const isUpwardTrend = trend === 'up';
   const bgColor = isUpwardTrend
-    ? "from-green-50 to-green-100"
-    : "from-red-50 to-red-100";
-  const borderColor = isUpwardTrend ? "border-green-200" : "border-red-200";
-  const lineColor = isUpwardTrend ? "#10b981" : "#ef4444";
+    ? 'from-green-50 to-green-100'
+    : 'from-red-50 to-red-100';
+  const borderColor = isUpwardTrend ? 'border-green-200' : 'border-red-200';
+  const lineColor = isUpwardTrend ? '#10b981' : '#ef4444';
 
   return (
     <div

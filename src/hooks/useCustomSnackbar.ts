@@ -1,4 +1,8 @@
-import { useSnackbar, type OptionsObject, type SnackbarMessage } from 'notistack';
+import {
+  useSnackbar,
+  type OptionsObject,
+  type SnackbarMessage,
+} from 'notistack';
 
 const useCustomSnackbar = () => {
   const { enqueueSnackbar } = useSnackbar();

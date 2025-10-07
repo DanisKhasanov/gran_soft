@@ -1,7 +1,5 @@
 import type { TradingAccount } from '../types/account';
 
-
-
 // Моковые данные для демонстрации
 const mockAccounts: TradingAccount[] = [
   {
@@ -57,8 +55,6 @@ const mockAccounts: TradingAccount[] = [
     leverage: 0,
     data: [],
   },
- 
-  
 ];
 
 export const fetchAccounts = async (): Promise<TradingAccount[]> => {
@@ -66,8 +62,7 @@ export const fetchAccounts = async (): Promise<TradingAccount[]> => {
     // В реальном приложении здесь будет запрос к API
     // const response = await api.get('/accounts');
     // return response.data;
-    
-    
+
     // Для демонстрации возвращаем моковые данные
     await new Promise(resolve => setTimeout(resolve, 1000)); // Имитация загрузки
     return mockAccounts;
@@ -77,7 +72,10 @@ export const fetchAccounts = async (): Promise<TradingAccount[]> => {
   }
 };
 
-export const depositToAccount = async (accountId: string, amount: number): Promise<void> => {
+export const depositToAccount = async (
+  accountId: string,
+  amount: number
+): Promise<void> => {
   try {
     // В реальном приложении здесь будет запрос к API
     // await api.post(`/accounts/${accountId}/deposit`, { amount });

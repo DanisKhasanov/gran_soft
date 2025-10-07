@@ -1,12 +1,12 @@
-import { type ReactNode } from "react";
-import { X } from "lucide-react";
+import { type ReactNode } from 'react';
+import { X } from 'lucide-react';
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
   children: ReactNode;
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   showCloseButton?: boolean;
   className?: string;
 }
@@ -16,17 +16,17 @@ const Modal = ({
   onClose,
   title,
   children,
-  size = "md",
+  size = 'md',
   showCloseButton = true,
-  className = "",
+  className = '',
 }: ModalProps) => {
   if (!isOpen) return null;
 
   const sizeClasses = {
-    sm: "w-80 max-w-sm",
-    md: "w-96 max-w-md",
-    lg: "w-[500px] max-w-lg",
-    xl: "w-[600px] max-w-xl",
+    sm: 'w-80 max-w-sm',
+    md: 'w-96 max-w-md',
+    lg: 'w-[500px] max-w-lg',
+    xl: 'w-[600px] max-w-xl',
   };
 
   const handleBackdropClick = (e: React.MouseEvent) => {

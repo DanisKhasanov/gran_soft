@@ -18,7 +18,7 @@ const depositModalSlice = createSlice({
       state.isOpen = true;
       state.accountId = action.payload;
     },
-    closeDepositModal: (state) => {
+    closeDepositModal: state => {
       state.isOpen = false;
       state.accountId = null;
     },
@@ -29,10 +29,10 @@ const addAccountModalSlice = createSlice({
   name: 'addAccountModal',
   initialState: initialAddAccountModalState,
   reducers: {
-    openAddAccountModal: (state) => {
+    openAddAccountModal: state => {
       state.isOpen = true;
     },
-    closeAddAccountModal: (state) => {
+    closeAddAccountModal: state => {
       state.isOpen = false;
     },
   },
@@ -42,21 +42,24 @@ const sidebarSlice = createSlice({
   name: 'sidebar',
   initialState: { isOpen: false },
   reducers: {
-    toggleSidebar: (state) => {
+    toggleSidebar: state => {
       state.isOpen = !state.isOpen;
     },
-    closeSidebar: (state) => {
+    closeSidebar: state => {
       state.isOpen = false;
     },
-    openSidebar: (state) => {
+    openSidebar: state => {
       state.isOpen = true;
     },
   },
 });
 
-export const { openDepositModal, closeDepositModal } = depositModalSlice.actions;
-export const { openAddAccountModal, closeAddAccountModal } = addAccountModalSlice.actions;
-export const { toggleSidebar, closeSidebar, openSidebar } = sidebarSlice.actions;
+export const { openDepositModal, closeDepositModal } =
+  depositModalSlice.actions;
+export const { openAddAccountModal, closeAddAccountModal } =
+  addAccountModalSlice.actions;
+export const { toggleSidebar, closeSidebar, openSidebar } =
+  sidebarSlice.actions;
 
 export const depositModalReducer = depositModalSlice.reducer;
 export const addAccountModalReducer = addAccountModalSlice.reducer;

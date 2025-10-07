@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { closeAddAccountModal } from '../../store/modalSlice';
 import { addAccount } from '../../store/accountSlice';
 import type { RootState } from '../../store';
@@ -7,7 +8,8 @@ import { Loader2 } from 'lucide-react';
 import useCustomSnackbar from '../../hooks/useCustomSnackbar';
 import Modal from '../common/Modal';
 
-const AddAccountModal: React.FC = () => {
+const AddAccountModal = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { isOpen } = useSelector((state: RootState) => state.addAccountModal);
   const [isCreating, setIsCreating] = useState(false);
@@ -22,18 +24,15 @@ const AddAccountModal: React.FC = () => {
     setIsCreating(true);
     try {
       const newAccount = await dispatch(addAccount(accountType) as any).unwrap();
-      // Сразу закрываем модальное окно после успешного создания
       handleClose();
-      // Показываем уведомление об успешном создании
-      showSnackbar(`Счет ${newAccount.id} успешно создан`, {
+      showSnackbar(t("common.accountCreated", { id: newAccount.id }), {
         variant: 'success',
         autoHideDuration: 3000,
       });
     } catch (error) {
       console.error('Ошибка создания счета:', error);
       setIsCreating(false);
-      // Показываем уведомление об ошибке
-      showSnackbar('Ошибка создания счета', {
+      showSnackbar(t("common.accountCreationError"), {
         variant: 'error',
         autoHideDuration: 4000,
       });
@@ -44,7 +43,7 @@ const AddAccountModal: React.FC = () => {
     <Modal
       isOpen={isOpen}
       onClose={handleClose}
-      title="Добавить новый счет"
+      title={t("modals.addAccount.title")}
       showCloseButton={!isCreating}
     >
       <div className="text-center py-8">
@@ -54,8 +53,7 @@ const AddAccountModal: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Standard Trading Account</h3>
-          <p className="text-gray-600 mb-6">Стандартный торговый счет с полным функционалом</p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">{t("account.standardAccount")}</h3>
         </div>
         
         <button
@@ -70,10 +68,10 @@ const AddAccountModal: React.FC = () => {
           {isCreating ? (
             <div className="flex items-center justify-center space-x-2">
               <Loader2 className="w-4 h-4 animate-spin" />
-              <span>Создание...</span>
+              <span>{t("common.creating")}</span>
             </div>
           ) : (
-            'Создать счет'
+            t("modals.addAccount.create")
           )}
         </button>
       </div>
@@ -88,7 +86,7 @@ const AddAccountModal: React.FC = () => {
               : 'hover:bg-gray-200'
           }`}
         >
-          Отмена
+          {t("modals.addAccount.cancel")}
         </button>
       </div>
     </Modal>

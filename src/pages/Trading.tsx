@@ -1,14 +1,14 @@
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Trading: React.FC = () => {
+const Trading = () => {
+  const { t } = useTranslation();
+  
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Торговля</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">{t("navigation.trading")}</h1>
         <div className="text-center">
-          <p className="text-gray-600 text-lg">Тут данные по Торговле</p>
+          <p className="text-gray-600 text-lg">{t("pages.tradingData")}</p>
         </div>
-      </div>
     </div>
   );
 };

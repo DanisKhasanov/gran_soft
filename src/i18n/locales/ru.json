@@ -1,0 +1,81 @@
+{
+  "header": {
+    "title": "ГРАНТ СОФТ",
+    "menuToggle": "Открыть меню"
+  },
+  "navigation": {
+    "dashboard": "Дашборд",
+    "trading": "Торговля",
+    "analytics": "Аналитика",
+    "profile": "Профиль"
+  },
+  "account": {
+    "addAccount": "Добавить аккаунт",
+    "standardAccount": "Стандартный аккаунт",
+    "appTradingAccount": "Приложение для торговли",
+    "balance": "Баланс",
+    "equity": "Собственный капитал",
+    "margin": "Маржа",
+    "freeMargin": "Свободная маржа",
+    "marginLevel": "Уровень маржи",
+    "deposit": "Пополнить",
+    "withdraw": "Вывести",
+    "settings": "Настройки"
+  },
+  "modals": {
+    "addAccount": {
+      "title": "Добавить новый аккаунт",
+      "accountType": "Тип аккаунта",
+      "accountName": "Название аккаунта",
+      "initialDeposit": "Начальный депозит",
+      "currency": "Валюта",
+      "leverage": "Кредитное плечо",
+      "create": "Создать",
+      "cancel": "Отмена"
+    },
+    "deposit": {
+      "title": "Пополнить аккаунт",
+      "amount": "Сумма",
+      "paymentMethod": "Способ оплаты",
+      "deposit": "Пополнить",
+      "cancel": "Отмена"
+    }
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "close": "Закрыть",
+    "confirm": "Подтвердить",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "view": "Просмотр",
+    "available": "Доступно",
+    "of": "из",
+    "limitReached": "Лимит достигнут",
+    "maxAccounts": "Максимум 5 счетов",
+    "creating": "Создание...",
+    "accountCreated": "Счет {{id}} успешно создан",
+    "accountCreationError": "Ошибка создания счета",
+    "account": "Счет",
+    "enterAmount": "Введите сумму",
+    "accountReactivated": "Счет {{id}} успешно реактивирован",
+    "accountReactivationError": "Ошибка реактивации счета",
+    "accountDeactivated": "Счет деактивирован",
+    "reactivate": "Реактивировать",
+    "reactivating": "Реактивация...",
+    "openApp": "Открыть приложение",
+    "tryAgain": "Попробовать снова"
+  },
+  "pages": {
+    "tradingData": "Тут данные по Торговле",
+    "profileData": "Тут данные по Профилю",
+    "analyticsData": "Тут данные по Аналитике"
+  },
+  "languages": {
+    "english": "English",
+    "russian": "Русский"
+  }
+}

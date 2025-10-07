@@ -1,28 +1,28 @@
 import { LayoutDashboard, BarChart3, TrendingUp, User } from "lucide-react";
 import type { NavItem } from "../components/layout/Sidebar";
 
-export const defaultNavItems: NavItem[] = [
+export const getDefaultNavItems = (t: (key: string) => string): NavItem[] => [
   {
     id: "dashboard",
-    label: "Главная",
+    label: t("navigation.dashboard"),
     icon: LayoutDashboard,
-    path: "/dashboard",
+    path: "/",
   },
   {
     id: "trading",
-    label: "Торговля",
+    label: t("navigation.trading"),
     icon: TrendingUp,
     path: "/trading",
   },
   {
     id: "analytics",
-    label: "Аналитика",
+    label: t("navigation.analytics"),
     icon: BarChart3,
     path: "/analytics",
   },
   {
     id: "profile",
-    label: "Профиль",
+    label: t("navigation.profile"),
     icon: User,
     path: "/profile",
   },

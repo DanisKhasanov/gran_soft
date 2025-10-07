@@ -19,7 +19,7 @@ export const loadAccounts = createAsyncThunk(
 export const addAccount = createAsyncThunk(
   'accounts/addAccount',
   async (accountType: 'StandardTradingAccount' | 'AppTradingAccount') => {
-    // Имитация создания нового счета
+   
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     const newAccount: TradingAccount = accountType === 'StandardTradingAccount' 

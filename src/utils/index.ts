@@ -1,1 +1,1 @@
-export { defaultNavItems } from './navigation';
+export { getDefaultNavItems } from './navigation';

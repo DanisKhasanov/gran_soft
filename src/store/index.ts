@@ -1,12 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import accountReducer from './accountSlice';
-import { depositModalReducer, addAccountModalReducer } from './modalSlice';
+import { depositModalReducer, addAccountModalReducer, sidebarReducer } from './modalSlice';
 
 export const store = configureStore({
   reducer: {
     accounts: accountReducer,
     depositModal: depositModalReducer,
     addAccountModal: addAccountModalReducer,
+    sidebar: sidebarReducer,
   },
 });
 

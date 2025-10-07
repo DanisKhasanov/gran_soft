@@ -1,12 +1,6 @@
-// import axios from 'axios';
 import type { TradingAccount } from '../types/account';
 
-// const API_BASE_URL = 'https://api.example.com'; // Замените на реальный URL API
 
-// const api = axios.create({
-//   baseURL: API_BASE_URL,
-//   timeout: 10000,
-// });
 
 // Моковые данные для демонстрации
 const mockAccounts: TradingAccount[] = [

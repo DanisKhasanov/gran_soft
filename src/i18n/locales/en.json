@@ -1,0 +1,81 @@
+{
+  "header": {
+    "title": "GRANT SOFT",
+    "menuToggle": "Open menu"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "trading": "Trading",
+    "analytics": "Analytics",
+    "profile": "Profile"
+  },
+  "account": {
+    "addAccount": "Add Account",
+    "standardAccount": "Standard Account",
+    "appTradingAccount": "App Trading Account",
+    "balance": "Balance",
+    "equity": "Equity",
+    "margin": "Margin",
+    "freeMargin": "Free Margin",
+    "marginLevel": "Margin Level",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "settings": "Settings"
+  },
+  "modals": {
+    "addAccount": {
+      "title": "Add New Account",
+      "accountType": "Account Type",
+      "accountName": "Account Name",
+      "initialDeposit": "Initial Deposit",
+      "currency": "Currency",
+      "leverage": "Leverage",
+      "create": "Create",
+      "cancel": "Cancel"
+    },
+    "deposit": {
+      "title": "Deposit to Account",
+      "amount": "Amount",
+      "paymentMethod": "Payment Method",
+      "deposit": "Deposit",
+      "cancel": "Cancel"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "available": "Available",
+    "of": "of",
+    "limitReached": "Limit reached",
+    "maxAccounts": "Maximum 5 accounts",
+    "creating": "Creating...",
+    "accountCreated": "Account {{id}} created successfully",
+    "accountCreationError": "Account creation error",
+    "account": "Account",
+    "enterAmount": "Enter amount",
+    "accountReactivated": "Account {{id}} reactivated successfully",
+    "accountReactivationError": "Account reactivation error",
+    "accountDeactivated": "Account deactivated",
+    "reactivate": "Reactivate",
+    "reactivating": "Reactivating...",
+    "openApp": "Open App",
+    "tryAgain": "Try Again"
+  },
+  "pages": {
+    "tradingData": "Trading data here",
+    "profileData": "Profile data here",
+    "analyticsData": "Analytics data here"
+  },
+  "languages": {
+    "english": "English",
+    "russian": "Русский"
+  }
+}

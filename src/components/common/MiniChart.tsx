@@ -1,5 +1,3 @@
-import React from "react";
-
 interface MiniChartProps {
   data?: number[];
   trend?: "up" | "down";
@@ -7,31 +5,29 @@ interface MiniChartProps {
   className?: string;
 }
 
-const MiniChart: React.FC<MiniChartProps> = ({
+const MiniChart = ({
   data = [30, 25, 20, 17, 15, 10],
   trend = "up",
   size = "md",
   className = "",
-}) => {
+}: MiniChartProps) => {
   const sizeClasses = {
     sm: "w-16 h-8",
     md: "w-24 h-12",
     lg: "w-32 h-16",
   };
 
-  // Нормализуем данные для отображения
   const maxValue = Math.max(...data);
   const minValue = Math.min(...data);
   const range = maxValue - minValue || 1;
 
   const normalizedData = data.map(
-    (value) => ((value - minValue) / range) * 30 + 5 // 5-35 по Y
+    (value) => ((value - minValue) / range) * 30 + 5 
   );
 
-  // Создаем путь для линии графика
   const pathData = normalizedData
     .map((value, index) => {
-      const x = (index / (data.length - 1)) * 70 + 5; // 5-75 по X
+      const x = (index / (data.length - 1)) * 70 + 5; 
       return `${index === 0 ? "M" : "L"} ${x} ${value}`;
     })
     .join(" ");
@@ -52,7 +48,6 @@ const MiniChart: React.FC<MiniChartProps> = ({
         viewBox="0 0 80 40"
         preserveAspectRatio="none"
       >
-        {/* Сетка */}
         <defs>
           <pattern
             id={`grid-${trend}`}
@@ -71,7 +66,6 @@ const MiniChart: React.FC<MiniChartProps> = ({
         </defs>
         <rect width="80" height="40" fill={`url(#grid-${trend})`} />
 
-        {/* Линия тренда */}
         <path
           d={pathData}
           fill="none"
@@ -82,7 +76,6 @@ const MiniChart: React.FC<MiniChartProps> = ({
           className="animate-pulse"
         />
 
-        {/* Точки на графике */}
         {normalizedData.map((value, index) => {
           const x = (index / (data.length - 1)) * 70 + 5;
           return (

@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# ГРАНТ СОФТ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современная торговая платформа с адаптивным интерфейсом для управления торговыми счетами, аналитики и профиля пользователя.
 
-Currently, two official plugins are available:
+## 🚀 Технологический стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React 19 + TypeScript
+- **Сборщик**: Vite 7
+- **Стилизация**: Tailwind CSS 4
+- **Состояние**: Redux Toolkit + React Redux
+- **Роутинг**: React Router DOM 7
+- **Интернационализация**: i18next + react-i18next
+- **Уведомления**: Notistack
+- **Иконки**: Lucide React
+- **HTTP клиент**: Axios
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Возможности
+- ✅ Управление торговыми счетами (до 5 счетов)
+- ✅ Создание новых счетов с настройками
+- ✅ Пополнение и вывод средств
+- ✅ Многоязычность (Русский/English)
+- ✅ Адаптивный дизайн
+- ✅ Уведомления о действиях
+- ✅ Состояние загрузки и обработка ошибок
 
-## Expanding the ESLint configuration
+## 🛠 Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Клонирование репозитория
+git clone <repository-url>
+cd gran_soft
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Установка зависимостей
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Запуск в режиме разработки
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+# Сборка для продакшена
+npm run build
+
+# Предварительный просмотр собранного проекта
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+## 🎨 Дизайн
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Проект использует современный дизайн с:
+- Адаптивной версткой для всех устройств
+- Минималистичным интерфейсом
+- Интуитивной навигацией
+- Плавными анимациями и переходами
+
+

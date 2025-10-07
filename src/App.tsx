@@ -1,5 +1,5 @@
 import { Provider, useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { store, type RootState } from './store';
 import { Header, Sidebar } from './components/layout';
@@ -20,7 +20,7 @@ function AppContent() {
   };
 
   return (
-    <Router>
+    <BrowserRouter basename="/gran_soft/">
       <div className="h-screen flex flex-col overflow-hidden">
         <Header />
         <div className="flex flex-1 overflow-hidden">
@@ -38,7 +38,7 @@ function AppContent() {
           </main>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
